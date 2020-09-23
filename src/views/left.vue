@@ -1,12 +1,12 @@
 <template>
   <el-row class="left">
-    <el-col :span='10'>
-      <l-left />
+      <el-col :span="10">
+        <l-left />
+      </el-col>
+    <el-col :span="10">
+      <l-center />
     </el-col>
-    <el-col :span='10'>
-      <l-center/>
-    </el-col>
-    <el-col :span='4'>
+    <el-col :span="4">
       <l-right />
     </el-col>
   </el-row>

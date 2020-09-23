@@ -33,82 +33,10 @@
       <h4>专业技能</h4>
       <div class="skill-dist">
         <ul>
-          <li>
-            <span>HTML</span>
+          <li v-for="item in skils" :key="item.name">
+            <span>{{item.name}}</span>
             <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>CSS</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>JS</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>EX6</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>jQuery</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>BootStrap</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>Webpack</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>gitHap</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>算法</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>Vue</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>Element</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>Lodash</span>
-            <div>
-              <p></p>
-            </div>
-          </li>
-          <li>
-            <span>mock</span>
-            <div>
-              <p></p>
+              <p :style="{transition: 'all 2s', width:item.plan}"></p>
             </div>
           </li>
         </ul>
@@ -120,10 +48,86 @@
 export default {
   data() {
     return {
-      num: 2,
+      self: false,
+      skils: [
+        {
+          name: 'HTML',
+          plan: '0px',
+          width: '95%',
+        },
+        {
+          name: 'CSS',
+          plan: '0px',
+          width: '95%',
+        },
+        {
+          name: 'JS',
+          plan: '0px',
+          width: '85%',
+        },
+        {
+          name: 'EX6',
+          plan: '0px',
+          width: '75%',
+        },
+        {
+          name: 'JQuery',
+          plan: '0px',
+          width: '85%',
+        },
+        {
+          name: 'Bootstrap',
+          plan: '0px',
+          width: '90%',
+        },
+        {
+          name: 'Webpack',
+          plan: '0px',
+          width: '70%',
+        },
+        {
+          name: 'gitHap',
+          plan: '0px',
+          width: '74%',
+        },
+        {
+          name: 'Element',
+          plan: '0px',
+          width: '72%',
+        },
+        {
+          name: 'Vue',
+          plan: '0px',
+          width: '85%',
+        },
+        {
+          name: 'Lodash',
+          plan: '0px',
+          width: '65%',
+        },
+        {
+          name: 'Mock',
+          plan: '0px',
+          width: '60%',
+        },
+        {
+          name: 'Moment',
+          plan: '0px',
+          width: '56%',
+        },
+      ],
     };
   },
+  mounted() {
+    this.skils.forEach((item) => {
+      /*eslint-disable*/
+     setTimeout(function(){
+       item.plan = item.width;
+     },200)
+     });
+  },
 };
+
 </script>
 <style lang='scss' scoped>
 @import "@/assets/css/left/left.scss";

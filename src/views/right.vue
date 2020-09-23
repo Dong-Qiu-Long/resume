@@ -1,6 +1,10 @@
 <template>
   <div class="right">
-    <router-view></router-view>
+    <transition
+      enter-active-class="animate__animated animate__fadeInUpBig "
+    >
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 <script>
